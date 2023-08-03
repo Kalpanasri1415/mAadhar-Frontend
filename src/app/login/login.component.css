@@ -1,0 +1,63 @@
+/* Style for the login container */
+.login-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+    background-image: url('../../assets/aadhar.jpg');
+    border: 5px solid #f2f1f5;
+    box-shadow: 0 2px 4px rgba(47, 43, 147, 0.1);
+  }
+  
+  /* Style for the heading */
+  .login-container h1 {
+    margin-bottom: 20px;
+    color: #f1eeee;
+  }
+  
+  /* Style for the navigation links */
+  .login-container nav {
+    margin-bottom: 20px;
+  }
+  
+  .login-container nav a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #faf8f8;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .login-container nav a:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .login-container nav a.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Additional style for the buttons */
+  .login-container button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .login-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  

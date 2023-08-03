@@ -1,0 +1,159 @@
+<!-- user-home.component.html -->
+<div class="login-container">
+    <h1>Welcome to mAadhar Application</h1>
+  </div>
+<div class="image">
+    <div class="container">
+      <!-- ... (existing code) -->
+      <div class="col card d-flex justify-content-center" style="width: 25rem">
+        <div class="card-body">
+          <h5 class="card-title" style="color: red">Your Details</h5>
+  
+          <div class="card-text" *ngFor="let user of fetchedUsers">
+            <p><b>Aadhar id:</b>&nbsp;{{ user.citizenId }}</p>
+            <p><b>Name&nbsp;:</b>&nbsp;{{ user.name }}</p>
+            <p><b>Date Of Birth:</b>&nbsp;{{ user.dob }}</p>
+            <p><b>Email:</b>&nbsp;{{ user.emailid }}</p>
+            <p><b>Address:</b>&nbsp;{{ user.address }}</p>
+            <p><b>Mobile No:</b>&nbsp;{{ user.mobileno }}</p>
+            <p><b>Gender:</b>&nbsp;{{ user.gender }}</p>
+            <p><b>Status:</b>&nbsp;{{ user.status }}</p> <!-- Add the status column -->
+            <button
+            type="button"
+            class="btn btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            (click)="onEdit(user)"
+          >
+            Update
+          </button>
+          <a
+            type="button"
+            class="btn btn-outline-primary align-right"
+            routerLink="/login"
+          >
+            Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer bg-secondary d-flex align-items-end"></div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update User</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="loginForm" style="color: rgb(120, 55, 5)">
+          <div class="row mb-2">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                name="name"
+                required
+                formControlName="name"
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="form-group">
+              <label for="dob">Date Of Birth</label>
+              <input
+                type="text"
+                id="dob"
+                class="form-control"
+                name="dob"
+                formControlName="dob"
+                required
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="form-group">
+              <label for="emailid">Email</label>
+              <input
+                type="text"
+                id="emailid"
+                class="form-control"
+                name="emailid"
+                formControlName="emailid"
+                required
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="form-group">
+              <label for="address">Address</label>
+              <textarea
+                type="text"
+                id="address"
+                class="form-control"
+                name="address"
+                required
+                formControlName="address"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="form-group">
+              <label for="Phoneno">Mobile No:</label>
+              <input
+                type="text"
+                id="mobileno"
+                class="form-control"
+                name="mobileno"
+                required
+                formControlName="mobileno"
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <input
+                type="text"
+                id="gender"
+                class="form-control"
+                name="gender"
+                required
+                formControlName="gender"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" (click)="updateUser()" class="btn btn-primary">
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

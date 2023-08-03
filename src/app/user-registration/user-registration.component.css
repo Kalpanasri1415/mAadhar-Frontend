@@ -1,0 +1,50 @@
+.image{
+    height:45em; background-size:cover; width:auto;
+    background-image:url('../../assets/aadhar1.jpeg');
+    background-position:100%;
+  }
+  /* styles.css or your CSS file */
+.image {
+    text-align: left;
+    padding: auto;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+  }
+  
+  .small {
+    font-size: 25px;
+  }
+  
+
+  /* styles.css or your CSS file */
+.btn-outline-danger {
+    color: rgb(245, 242, 242);
+    border: 2px solid red;
+    background-color: hsl(240, 78%, 79%);
+  }
+  
+  .btn-outline-danger:hover {
+    color: white;
+    background-color: rgb(234, 228, 228);
+  }
+  
+  .btn-outline-danger:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  
+
+ 
+  

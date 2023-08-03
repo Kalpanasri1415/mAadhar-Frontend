@@ -1,0 +1,54 @@
+<div class="image">
+    <br />
+    <br />
+    <div class="container d-flex justify-content-center">
+      <form
+        [formGroup]="loginForm"
+        (ngSubmit)="onSubmit()"
+        class="w-50 p-4"
+        style="color: rgb(3, 11, 51)"
+      >
+        <h4 class="text-center">Citizen Login</h4>
+  
+        <div class="row">
+          <div class="form-group">
+            <label for="citizenId">AadharId</label>
+            <br />
+            <input
+              type="number"
+              id="citizen_id"
+              class="form-control"
+              formControlName="citizenId"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label for="password">Password</label>
+            <br />
+            <span class="small" style="color: darkgreen"
+              >Your mobile number is your password</span
+            >
+  
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              formControlName="mobileno"
+            />
+            <span
+              style="color: red"
+              class="small"
+              *ngIf="
+                !loginForm.get('mobileno')?.valid &&
+                loginForm.get('mobileno')?.touched
+              "
+              >Please enter a valid password</span
+            >
+          </div>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-outline-danger">Login</button>
+      </form>
+    </div>
+  </div>

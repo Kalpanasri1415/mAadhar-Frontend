@@ -1,0 +1,48 @@
+<div class="image">
+    <div>
+      <h1 class="d-flex justify-content-center" style="color: crimson">
+        AADHAR APPLICATION
+      </h1>
+    </div>
+    <div class="container">
+      <button class="btn btn-outline-danger mt-5" (click)="onFetchUsers()">
+        View All
+      </button>
+      <div class="row m-3">
+        <div class="col">
+          <p *ngIf="fetchedUsers.length < 1">No Users Available !!</p>
+          <ul class="list-group" *ngIf="fetchedUsers.length >= 1">
+            <li class="list-group-item" *ngFor="let user of fetchedUsers">
+              <p><b>Aadhar id:</b>&nbsp;{{ user.citizenId }}</p>
+              <p><b>Name&nbsp;:</b>&nbsp;{{ user.name }}</p>
+              <p><b>Date Of Birth:</b>&nbsp;{{ user.dob }}</p>
+              <p><b>Email:</b>&nbsp;{{ user.emailid }}</p>
+  
+              <p><b>Address:</b>&nbsp;{{ user.address }}</p>
+              <p><b>Mobile No:</b>&nbsp;{{ user.mobileno }}</p>
+  
+              <p><b>Gender:</b>&nbsp;{{ user.gender }}</p>
+              <p><b>Status:</b>&nbsp;{{ user.status }}</p>
+  
+              <button
+                class="btn btn-sm btn-danger"
+                (click)="onDeleteUser(user.citizenId)"
+              >
+                Delete
+              </button>
+  
+              <!-- Add the "Approve" button with an *ngIf condition -->
+              <button
+                class="btn btn-sm btn-success"
+                *ngIf="user.status === 'pending'"
+                (click)="onApprove(user)"
+              >
+                Approve
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  

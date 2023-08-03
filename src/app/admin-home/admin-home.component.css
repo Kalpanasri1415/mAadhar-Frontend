@@ -1,0 +1,41 @@
+/* Add these CSS styles to your styles.css or styles.scss file */
+
+.image {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  .btn {
+    margin-bottom: 10px;
+  }
+  
+  .list-group {
+    margin-top: 20px;
+  }
+  
+  .list-group-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .list-group-item p {
+    margin: 0;
+  }
+  
+  .list-group-item button {
+    float: right;
+  }
+  
+  .list-group-item p b {
+    font-weight: bold;
+  }
+  

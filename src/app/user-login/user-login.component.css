@@ -1,0 +1,54 @@
+/* styles.css or your CSS file */
+.image {
+    text-align: left;
+  }
+  
+  .container {
+    margin-top: 10px;
+  }
+  
+  form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  h4 {
+    color: #12023f;
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="number"],
+  input[type="password"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .small {
+    font-size: 12px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #c82333;
+  }
+  
